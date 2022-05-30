@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "715214867891",
+    "firebase_url": "https://flutter-acme-default-rtdb.firebaseio.com",
+    "project_id": "flutter-acme",
+    "storage_bucket": "flutter-acme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715214867891:android:a7f5edb94fefde449ccfc6",
+        "android_client_info": {
+          "package_name": "com.example.acme_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715214867891-kjt4vvm0sot7a63eqdag743101md4fre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzPYEY8SHIbgQIg4PyUIx0TlCR4ohNv5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715214867891-kjt4vvm0sot7a63eqdag743101md4fre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
