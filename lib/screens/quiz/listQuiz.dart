@@ -46,6 +46,7 @@ class _ListQuizScreenState extends State<ListQuizScreen> {
   
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: appBar(),
       body: FirebaseAnimatedList(
@@ -63,7 +64,7 @@ class _ListQuizScreenState extends State<ListQuizScreen> {
               title: Text(value["title"]),
               subtitle: Text(value["uId"]),
               trailing: SizedBox(
-                width: 180,
+                width: size.width * 0.6,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [

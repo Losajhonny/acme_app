@@ -34,6 +34,7 @@ class _ShowAnswerScreenState extends State<ShowAnswerScreen> {
         onetime = false;
       });
     }
+
     try {
 
       List<DataSnapshot> answerData = 
@@ -43,16 +44,7 @@ class _ShowAnswerScreenState extends State<ShowAnswerScreen> {
           .toList()
           ;
 
-      var infoquiz = (
-          await database
-            .child("answers")
-            .child(uid)
-            .get()
-        )
-          .children
-          .first
-          .value
-          as Map;
+      var infoquiz = answerData.first.value as Map;
       
       setState(() {
         quiz.title = infoquiz["quiz"];
@@ -63,8 +55,10 @@ class _ShowAnswerScreenState extends State<ShowAnswerScreen> {
           answer.quiz = quiz.title;
           answer.uId = quiz.uId;
 
-          for (var element in item.child("answers").children) {
-            var ans = element.value as Map;
+          var lista = item.child("answers").value as List;
+
+          for (var element in lista) {
+            var ans = element as Map;
             answer.answers.add({
               "title": ans["title"],
               "answer": ans["answer"]
